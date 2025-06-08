@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Quiz App</title>
+    <style>
+        /*Custom utility for 360-degree rotation*/
+        .rotate-180 {
+            transform: rotate(180deg);
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body class="bg-gray-300 min-h-screen flex flex-col items-center">
+    <h1 class="font-bold text-6xl text-black py-4 w-full flex justify-center items-center">
+        QUIZ <span class="text-pink-700 ml-3">2.0</span>
+    </h1>
+    <!-- WELCOME PAGE -->
+    <section id="homeSection" class="max-w-screen-md w-full flex flex-col items-center justify-between gap-4 py-8 flex-1">
+        <div class="text-center">
+            <span class="font-medium text-3xl text-gray-900 animate-[fadeSlide] duration-500 ease-in-out">WELCOME TO YOUR ULTIMATE QUIZ APP!</span>
+        </div>
+        <button id="startBtn" class="shadow-2xs font-medium text-2xl bg-white text-pink-700 px-6 py-2 rounded-full mb-4 hover:bg-gray-100 hover:text-black hover:cursor-pointer">START</button>
+    </section>
+
+    <section id="mainContainer">
+            <!-- NAVIGATION PAGE --> 
+        <div id="navigationSection" class="hidden justify-between max-w-screen-md w-full flex flex-col items-center py-8 px-4">
+            <span id="readyQuestion" class="flex flex-col font-medium text-3xl text-gray-900 items-center gap-4">
+                <p class=>Are you ready to challenge your mind?</p>
+                <p>Let's see how much you know!</p>
+                <p class="mt-8 text-pink-700">Click the desired button continue...</p>
+            </span>
+            <div class="mt-30 flex flex-row gap-4">
+                <button id="instructionsBtn" class="flex bg-gray-700 text-white hover:bg-gray-200 hover:text-black px-4 py-2 rounded hover:cursor-pointer">INSTRUCTIONS</button>
+                <button id="startQuizBtn" class="flex bg-blue-500 text-white hover:bg-gray-200 hover:text-black px-4 py-2 rounded hover:cursor-pointer">START QUIZ</button>
+            </div>
+        </div>  
+
+
+        <!--INSTRUCTIONS SECTION-->
+        <div id="instructionsSection" class="hidden mt-4 flex flex-col gap-3">
+            <h1 class="text-3xl font-bold border-b border-gray-500 mb-2 p-2 flex justify-center text-center ">Quiz Instructions</h1>
+            <h3 class="text-2xl">📌 Welcome to the Ultimate Quiz Challenge!</h3>
+            <p class="mt-1">🔹 You will be asked multiple-choice questions.</p>
+            <p class="mt-1">🔹 Select the correct answer by clicking on one of the options.</p>
+            <p class="mt-1">🔹 Click the Next button to move to the next question.</p>
+            <p class="mt-1">🔹 You cannot go back, so think before you choose!</p>
+            <p class="mt-1">🔹 There is a 10 seconds timer for each question.</p>
+            <p class="mt-1">🔹 At the end, your score will be displayed.</p>
+            <p class="mt-1">🔹 Click Retry to take the quiz again.</p>
+            <p class="mt-1">🔹 Good luck! 🍀</p>
+            <button id="returnBtn"class="hover:cursor-pointer bg-gray-200 border border-dotted hover:bg-gray-400 text-pink-700 hover:text-black 
+            w-40 mb-2 py-2 text-2xl font-medium ml-40 rounded-3xl flex items-center justify-center">Return</button>
+        </div>
+
+        <!--QUIZ SECTION-->
+        <div id="startQuizSection" class="hidden mt-4 justify-center">
+            <h3 class="font-medium text-3xl">Select a Category</h3>
+            <div class="flex flex-col gap-6 mt-10">
+                <button id="javascriptBtn" value="JAVASCRIPT" class="category-btn hover:cursor-pointer font-bold bg-yellow-200 px-4 py-2 rounded">JAVASCRIPT</button>
+                <button id="pythonBtn" value="PYTHON" class="category-btn hover:cursor-pointer font-bold bg-green-200 px-4 py-2 rounded">PYTHON</button>
+                <button id="mechatronicsBtn" value="MECHATRONICS" class="category-btn hover:cursor-pointer font-bold bg-red-200 px-4 py-2 rounded">MECHATRONICS</button>
+
+        <!--DROPDOWN FUNCTIONALITY-->
+        <div id="difficultySelector" class="hidden">
+            <div class="flex flex-col items-center">
+                <button id="optionsButton" class="font-semibold px-4 py-2 pl-3 gap-4 bg-white rounded-sm text-sm text-gray-700 shadow hover:bg-gray-100 cursor-pointer flex items-center">
+                    Select Difficulty
+                    <i id="optionsCaret" class="fas fa-chevron-down w-4 h-4 mt-1 text-gray-400"></i>
+                </button>
+                <div id="optionsMenu" class="flex flex-col mt-2 ml-8 w-48 z-10 rounded-sm shadow hidden bg-white">
+                    <div data-difficulty="easy" class="difficulty-btn block px-3 py-2 text-sm text-gray-800 hover:bg-gray-500 cursor-pointer">
+                        <i class="fas fa-seedling w-5 h-5 mr-2 text-gray-400"></i>
+                        Easy
+                    </div>
+                    <div data-difficulty="medium" class="difficulty-btn block px-3 py-2 text-sm text-gray-800 hover:bg-gray-500 cursor-pointer">
+                        <i class="fas fa-adjust w-5 h-5 mr-2 text-gray-400"></i>
+                        Medium
+                    </div>
+                    <div data-difficulty="hard" class="difficulty-btn block px-3 py-2 text-sm text-gray-800 hover:bg-gray-500 cursor-pointer">
+                        <i class="fas fa-fire w-5 h-5 mr-2 text-gray-400"></i>
+                        Hard
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="quizContainer" class="hidden flex flex-col items-center justify-center p-4 bg-gray-100 w-1/2 m-2.5 h-1/2 rounded-3xl shadow space-y-4"></div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
