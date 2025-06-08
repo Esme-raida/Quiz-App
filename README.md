@@ -43,7 +43,7 @@ A responsive and category-based quiz web application built using **HTML, CSS (Ta
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/Esme-raida /quiz-app.git
+   git clone https://github.com/Esme-raida /Quiz-App.git
 ````
 
 2. Navigate to the project folder:
