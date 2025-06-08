@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Quiz App</title>
     <style>
-        /*Custom utility for 180-degree rotation*/
+        /*Custom utility for 360-degree rotation*/
         .rotate-180 {
             transform: rotate(180deg);
             transition: transform 0.3s;
@@ -49,9 +49,9 @@
             <p class="mt-1">🔹 Select the correct answer by clicking on one of the options.</p>
             <p class="mt-1">🔹 Click the Next button to move to the next question.</p>
             <p class="mt-1">🔹 You cannot go back, so think before you choose!</p>
-            <p class="mt-1">🔹 There is a 10 seconds timer for each question.</p>
             <p class="mt-1">🔹 At the end, your score will be displayed.</p>
-            <p class="mt-1">🔹 Click Retry to take the quiz again.</p>
+            <p class="mt-1">🔹 Click Restart to take the quiz again.</p>
+            <p class="mt-1">🔹 Click return to category to choose another category and restart
             <p class="mt-1">🔹 Good luck! 🍀</p>
             <button id="returnBtn"class="hover:cursor-pointer bg-gray-200 border border-dotted hover:bg-gray-400 text-pink-700 hover:text-black 
             w-40 mb-2 py-2 text-2xl font-medium ml-40 rounded-3xl flex items-center justify-center">Return</button>
@@ -89,7 +89,7 @@
             </div>
         </div>
     </section>
-    <div id="quizContainer" class="hidden flex flex-col items-center justify-center p-4 bg-gray-100 w-1/2 m-2.5 h-1/2 rounded-3xl shadow space-y-4"></div>
+    <div id="quizContainer" class="hidden flex flex-col items-center justify-center p-4 bg-gray-100 w-3/4 m-2.5 h-1/2 rounded-3xl shadow space-y-4"></div>
     <script type="module" src="script.js"></script>
 </body>
 </html>
