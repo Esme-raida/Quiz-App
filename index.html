@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="output.css" rel="stylesheet"> 
+    <link href="./output.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Quiz App</title>
     <style>
@@ -19,11 +19,11 @@
         QUIZ <span class="text-pink-700 ml-3">2.0</span>
     </h1>
     <!-- WELCOME PAGE -->
-    <section id="homeSection" class="max-w-screen-md w-full flex flex-col items-center justify-between gap-4 py-8 flex-1">
+    <section id="homeSection" class="max-w-screen-md w-full flex flex-col items-center justify-between flex-1 py-8">
         <div class="text-center">
             <span class="font-medium text-3xl text-gray-900 animate-[fadeSlide] duration-500 ease-in-out">WELCOME TO YOUR ULTIMATE QUIZ APP!</span>
         </div>
-        <button id="startBtn" class="shadow-2xs font-medium text-2xl bg-white text-pink-700 px-6 py-2 rounded-full mb-4 hover:bg-gray-100 hover:text-black hover:cursor-pointer">START</button>
+        <button id="startBtn" class="shadow-2xs font-medium text-2xl bg-white text-pink-700 px-6 py-2 rounded-full mb-30 hover:bg-gray-100  hover:text-black hover:cursor-pointer">START</button>
     </section>
 
     <section id="mainContainer">
@@ -42,7 +42,7 @@
 
 
         <!--INSTRUCTIONS SECTION-->
-        <div id="instructionsSection" class="hidden mt-4 flex flex-col gap-3 w-3/4">
+        <div id="instructionsSection" class="hidden mt-4 flex flex-col gap-3">
             <h1 class="text-3xl font-bold border-b border-gray-500 mb-2 p-2 flex justify-center text-center ">Quiz Instructions</h1>
             <h3 class="text-2xl">📌 Welcome to the Ultimate Quiz Challenge!</h3>
             <p class="mt-1">🔹 You will be asked multiple-choice questions.</p>
@@ -54,7 +54,7 @@
             <p class="mt-1">🔹 Click return to category to choose another category and restart
             <p class="mt-1">🔹 Good luck! 🍀</p>
             <button id="returnBtn"class="hover:cursor-pointer bg-gray-200 border border-dotted hover:bg-gray-400 text-pink-700 hover:text-black 
-            w-40 mb-2 py-2 text-2xl font-medium ml-40 rounded-3xl flex items-center justify-center">Return</button>
+            w-40 mb-2 py-2 text-2xl font-medium ml-40 rounded-3xl flex items-center justify-center sm: ml-0">Return</button>
         </div>
 
         <!--QUIZ SECTION-->
