@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="output.css" rel="stylesheet"> 
+    <link href="./output.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Quiz App</title>
     <style>
@@ -42,20 +42,27 @@
 
 
         <!--INSTRUCTIONS SECTION-->
-        <div id="instructionsSection" class="hidden mt-4 flex flex-col gap-3 w-full px-4 sm:w-3/4 items-center text-center">
-            <h1 class="text-3xl font-bold border-b border-gray-500 mb-2 p-2 flex justify-center text-center ">Quiz Instructions</h1>
-            <h3 class="text-2xl">📌 Welcome to the Ultimate Quiz Challenge!</h3>
-            <p class="mt-1">🔹 You will be asked multiple-choice questions.</p>
-            <p class="mt-1">🔹 Select the correct answer by clicking on one of the options.</p>
-            <p class="mt-1">🔹 Click the Next button to move to the next question.</p>
-            <p class="mt-1">🔹 You cannot go back, so think before you choose!</p>
-            <p class="mt-1">🔹 At the end, your score will be displayed.</p>
-            <p class="mt-1">🔹 Click Restart to take the quiz again.</p>
-            <p class="mt-1">🔹 Click return to category to choose another category and restart
-            <p class="mt-1">🔹 Good luck! 🍀</p>
-            <button id="returnBtn" class="hover:cursor-pointer bg-gray-200 border border-dotted hover:bg-gray-400 text-pink-700 hover:text-black 
-            w-40 mb-2 py-2 text-2xl font-medium rounded-3xl flex items-center justify-center mx-auto">Return</button>
+<!-- INSTRUCTIONS SECTION -->
+        <div id="instructionsSection" class="hidden mt-4 flex flex-col gap-3 w-full px-4 text-gray-800">
+            <h1 class="text-3xl font-bold border-b border-gray-500 mb-2 p-2 text-center">Quiz Instructions</h1>
+            <h3 class="text-2xl text-center sm:text-left">📌 Welcome to the Ultimate Quiz Challenge!</h3>
+            <p class="mt-1 text-center sm:text-left">🔹 You will be asked multiple-choice questions.</p>
+            <p class="mt-1 text-center sm:text-left">🔹 Select the correct answer by clicking on one of the options.</p>
+            <p class="mt-1 text-center sm:text-left">🔹 Click the Next button to move to the next question.</p>
+            <p class="mt-1 text-center sm:text-left">🔹 You cannot go back, so think before you choose!</p>
+            <p class="mt-1 text-center sm:text-left">🔹 At the end, your score will be displayed.</p>
+            <p class="mt-1 text-center sm:text-left">🔹 Click Restart to take the quiz again.</p>
+            <p class="mt-1 text-center sm:text-left">🔹 Click return to category to choose another category and restart.</p>
+            <p class="mt-1 text-center sm:text-left">🔹 Good luck! 🍀</p>
+
+            <div class="flex justify-center sm:justify-start mt-4">
+                <button id="returnBtn" class="hover:cursor-pointer bg-gray-200 border border-dotted hover:bg-gray-400 text-pink-700 hover:text-black 
+                w-40 py-2 text-2xl font-medium rounded-3xl flex items-center justify-center">
+                    Return
+                </button>
+            </div>
         </div>
+
 
         <!--QUIZ SECTION-->
         <div id="startQuizSection" class="hidden mt-4 justify-center">
